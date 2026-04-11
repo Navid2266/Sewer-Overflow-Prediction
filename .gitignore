@@ -1,0 +1,22 @@
+# ── Raw data (not version-controlled — obtain separately) ─────────────────────
+Pluviometer data/
+Sewage data/
+
+# ── Generated outputs ──────────────────────────────────────────────────────────
+data_clean.parquet
+overflow_events.csv
+overflow_events_merged.csv
+figures/
+*.html
+
+# ── Python ─────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+
+# ── Jupyter ────────────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+
+# ── OS ─────────────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
