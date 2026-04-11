@@ -17,23 +17,23 @@ Two rain gauge stations: **Avant-Port (P01)** and **Flagey (P14)**.
 
 ### Sewer level — full time series
 
-![Sewer level overview](images/sewer_level_overview.svg)
+![Sewer level time series](sewer.png)
 
-### Rainfall — monthly totals per station
+### Rainfall — both stations
 
-![Rainfall overview](images/rainfall_overview.svg)
+![Rainfall time series](rain.png)
 
-### Sewer level distribution
+### Sewer level & rainfall aligned
 
-![Sewer level distribution](images/sewer_distribution.svg)
+![Combined sewer and rainfall](combined.png)
 
 ---
 
 ## Results
 
-### Overflow event zoom (±12 h window)
+### Model predictions vs actual
 
-![Overflow event zoom](images/overflow_event_zoom.svg)
+![Model predictions](prediction.png)
 
 | Metric | Value |
 |--------|-------|
@@ -52,7 +52,6 @@ Two rain gauge stations: **Avant-Port (P01)** and **Flagey (P14)**.
 Model.ipynb            # Main notebook — all steps end-to-end
 step1_load_merge.py    # Standalone: load & inspect raw data
 step2_clean_merge.py   # Standalone: clean, resample, merge
-images/                # SVG visualizations used in this README
 ```
 
 ---

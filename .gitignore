@@ -7,6 +7,7 @@ data_clean.parquet
 overflow_events.csv
 overflow_events_merged.csv
 figures/
+images/
 *.html
 gen_images.py
 
