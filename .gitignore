@@ -8,6 +8,7 @@ overflow_events.csv
 overflow_events_merged.csv
 figures/
 *.html
+gen_images.py
 
 # ── Python ─────────────────────────────────────────────────────────────────────
 __pycache__/

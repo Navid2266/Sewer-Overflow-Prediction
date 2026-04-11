@@ -4,16 +4,45 @@ Predicting sewer water levels at the **Lion overflow location (DO08)** in Brusse
 
 ---
 
-## Data
+## Dataset
 
 | Source | Files | Resolution | Coverage |
 |--------|-------|------------|----------|
 | Pluviometer (FLOWBRU) | `2022.xlsx`, `2023.xlsx`, `2024.xlsx` | 5 min | 2022–2024 |
 | Sewer level DO08 | `U24_2022.csv`, `U24_2023.csv`, `U24_2024.csv` | 1 min | 2022–2024 |
 
-Two rain gauge stations are used: **Avant-Port (P01)** and **Flagey (P14)**.
+Two rain gauge stations: **Avant-Port (P01)** and **Flagey (P14)**.
 
 > Raw data files are not tracked in this repository. Place them in `Pluviometer data/` and `Sewage data/` before running.
+
+### Sewer level — full time series
+
+![Sewer level overview](images/sewer_level_overview.svg)
+
+### Rainfall — monthly totals per station
+
+![Rainfall overview](images/rainfall_overview.svg)
+
+### Sewer level distribution
+
+![Sewer level distribution](images/sewer_distribution.svg)
+
+---
+
+## Results
+
+### Overflow event zoom (±12 h window)
+
+![Overflow event zoom](images/overflow_event_zoom.svg)
+
+| Metric | Value |
+|--------|-------|
+| Dataset span | 2022-01-01 → 2024-12-30 |
+| 5-min timesteps (after merge) | 315,360 |
+| Overflow readings (> 3000 mm) | ~30,000 (~10% of data) |
+| Distinct overflow events | ~301 |
+| Max recorded level | 3,731 mm |
+| Max 5-min rainfall | 12.7 mm (Avant-Port) |
 
 ---
 
@@ -23,6 +52,7 @@ Two rain gauge stations are used: **Avant-Port (P01)** and **Flagey (P14)**.
 Model.ipynb            # Main notebook — all steps end-to-end
 step1_load_merge.py    # Standalone: load & inspect raw data
 step2_clean_merge.py   # Standalone: clean, resample, merge
+images/                # SVG visualizations used in this README
 ```
 
 ---
@@ -49,16 +79,3 @@ pip install pandas numpy plotly openpyxl pyarrow
 ```
 
 Python 3.11+ recommended.
-
----
-
-## Key Results (EDA)
-
-| Metric | Value |
-|--------|-------|
-| Dataset span | 2022-01-01 → 2024-12-30 |
-| 5-min timesteps | 315,360 |
-| Overflow readings (> 3000 mm) | ~30,000 (≈ 10% of data) |
-| Distinct overflow events | ~301 |
-| Max recorded level | 3,731 mm |
-| Max rainfall (5-min) | 12.7 mm (Avant-Port) |
