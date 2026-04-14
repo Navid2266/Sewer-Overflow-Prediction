@@ -10,6 +10,11 @@ figures/
 images/
 *.html
 gen_images.py
+step1_load_merge.py
+step2_clean_merge.py
+
+# ── Report ─────────────────────────────────────────────────────────────────────
+report.tex
 
 # ── Python ─────────────────────────────────────────────────────────────────────
 __pycache__/
