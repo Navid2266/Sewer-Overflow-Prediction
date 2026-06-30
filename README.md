@@ -33,7 +33,7 @@ Two rain gauge stations: **Avant-Port (P01)** and **Flagey (P14)**.
 
 ### Model predictions vs actual
 
-![Model predictions](prediction.png)
+![Model predictions](Picture1.png)
 
 | Metric | Value |
 |--------|-------|
